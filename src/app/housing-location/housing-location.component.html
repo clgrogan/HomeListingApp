@@ -1,0 +1,15 @@
+<section class="listing">
+  <!-- Brackets around the attribute binds the HTML element to the class. 
+    [src]="housingLocation.photo" gets the value of the photo on housingLocation object -->
+  <!--  Double curly braces in the template are Angulars interpolation syntax. Hey, Dom, go look in the
+    class for this variable and insert the string value here into the template -->
+  <img
+    class="listing-photo"
+    [src]="housingLocation.photo"
+    alt="Exterior photo of {{ housingLocation.name }}"
+  />
+  <h2 class="listing-heading">{{ housingLocation.name }}</h2>
+  <p class="listing-location">
+    {{ housingLocation.city }} {{ housingLocation.state }}
+  </p>
+</section>

@@ -1,0 +1,16 @@
+<section>
+  <form>
+    <input type="text" placeholder="Filter by City" />
+    <button class="primary" type="button">Search</button>
+  </form>
+</section>
+<section class="results">
+  <!-- The structural directive is used to change the structure of the DOM by adding, removing, or 
+    manipulating elements
+    *ngFor Repeast a template for each item in a list in this case, the directive is added to
+    the app-housing-location component and inserts its template for each item in the housingLocationList -->
+  <app-housing-location
+    *ngFor="let housingLocation of housingLocationList"
+    [housingLocation]="housingLocation"
+  ></app-housing-location>
+</section>
